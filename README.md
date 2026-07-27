@@ -1,18 +1,12 @@
 ## 🔍 Overview
 
-**SymfuseX** is a unified framework that couples **drug–target prediction** with **target-conditioned molecule generation**.
+**TREAT** is a unified framework that couples **drug–target prediction** with **target-conditioned molecule generation**.
 
 It supports:
 
 - ✅ **Drug–Target Interaction (DTI) classification**
 - ✅ **Drug–Target Affinity (DTA) regression**
 - ✅ **Target-preference molecule generation**
-
-The core of SymfuseX is a **Symbiotic Fusion Mechanism**:
-
-- A **symbiosis module** performs **dimension-wise CoEM-style modulation** between drug and protein representations, allowing both sides to co-adapt to each other’s binding preferences.
-- A **fusion module** aggregates **raw** and **modulated** features along **multiple interaction paths** with a gating network, emphasizing paths that contribute most to binding probability and affinity.
-- The resulting **target-conditioned drug descriptor** `Md` is reused as a **latent guidance vector** to drive fragment-based molecular generation around the target’s local chemical space.
 
 ## ⚙️ Installation & Requirements
 
@@ -96,18 +90,5 @@ After completing the DTI and DTA tasks, a **.pth checkpoint will be produced for
 python generate.py
 ```
 We also provide pretrained DTI and DTA models, together with 10 example inputs. You can set the **SAMPLE_IDX parameter in generate.py (0–9)** to perform generation for different targets.To facilitate peer review and reduce evaluation time, we release a lightweight version of the generation pipeline. The full version will be made available in a subsequent update, packaged with a more user-friendly web-based UI.
-
-**Additional de novo molecules generated for different targets(Target information can be found in the PDB database: https://www.rcsb.org/) are provided below. If anyone requires further data, please feel free to contact us.**
-<p align="center">
-<img width="560" height="985" alt="image" src="P22.jpg" />
-</p>
-
-## ✨✨ Acknowledgements
-**❤️We thank the following studies for inspiring this work：**
-
-[1] Bai P, Miljković F, John B, et al. Interpretable bilinear attention network with domain adaptation improves drug–target prediction[J]. Nature Machine Intelligence, 2023, 5(2): 126-136.<br>
-[2] Perez E, Strub F, De Vries H, et al. Film: Visual reasoning with a general conditioning layer[C]//Proceedings of the AAAI conference on artificial intelligence. 2018, 32(1).<br>
-[3] Feng B M, Zhang Y Y, Niu N W J, et al. Defusedti: Interpretable drug target interaction prediction model with dual-branch encoder and multiview fusion[J]. Future Generation Computer Systems, 2024, 161: 239-247.<br>
-[4] Ilse M, Tomczak J, Welling M. Attention-based deep multiple instance learning[C]//International conference on machine learning. PMLR, 2018: 2127-2136.<br>
 
 We sincerely thank the Editor and the anonymous reviewers for the time and effort they have devoted to improving the quality of this manuscript. We express our highest respect and best wishes in appreciation of their valuable contributions.❤️
