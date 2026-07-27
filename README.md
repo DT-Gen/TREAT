@@ -14,7 +14,7 @@ It supports:
 
 OS: Ubuntu 24.04.3 LTS
 
-GPU: NVIDIA A100-SXM4-80GB × 4 (DGX class server)
+GPU: NVIDIA A100-SXM4-80GB × 1 (DGX class server)
 
 Driver: 570.195.03
 
