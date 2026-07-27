@@ -37,8 +37,8 @@ importlib-metadata: 8.7.0
 We recommend creating a fresh conda environment before installing the dependencies.
 ### 1) Create and activate a new conda environment (Python 3.9)
 ```bash
-conda create -n symfuseX python=3.9.24 -y
-conda activate symfuseX
+conda create -n TREAT python=3.9.24 -y
+conda activate TREAT
 python -m pip install -U pip
 ```
 ### 2) Install RDKit (recommended via conda-forge)
@@ -61,7 +61,7 @@ Regardless of the task type, training can be launched with a single command.
 
 **Set MAX_EPOCH to 100, BATCH_SIZE to 64 and LR to 5e-5 in SymfuseX.yaml**, then run:
 ```bash
-python main.py --cfg "configs/SymfuseX.yaml" --task "DTI" --split "${split}" --dataset "${dataset}"
+python main.py --cfg "configs/TREAT.yaml" --task "DTI" --split "${split}" --dataset "${dataset}"
 ```
 ${split} can be random or fold; ${dataset} can be bindingdb, human, or biosnap.
 
