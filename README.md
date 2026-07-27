@@ -49,17 +49,17 @@ conda install -y -c conda-forge rdkit=2024.09.5
 ```bash
 pip install -r requirements.txt
 ```
-### 4) clone the source code of SymfuseX
+### 4) clone the source code of TREAT
  git clone https://github.com/DT-Gen/TREAT.git
 
- cd SymfuseX
+ cd TREAT
 
-## 🚀 Run SymfuseX to Reproduce Results
+## 🚀 Run TREAT to Reproduce Results
 Regardless of the task type, training can be launched with a single command.
 
 ### 1️⃣ Train DTI classification
 
-**Set MAX_EPOCH to 100, BATCH_SIZE to 64 and LR to 5e-5 in TREAT**, then run:
+**Set MAX_EPOCH to 100, BATCH_SIZE to 64 and LR to 5e-5 in TREAT.yaml**, then run:
 ```bash
 python main.py --cfg "configs/TREAT.yaml" --task "DTI" --split "${split}" --dataset "${dataset}"
 ```
