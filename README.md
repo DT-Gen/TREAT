@@ -50,7 +50,7 @@ conda install -y -c conda-forge rdkit=2024.09.5
 pip install -r requirements.txt
 ```
 ### 4) clone the source code of SymfuseX
- git clone https://github.com/fbbgood/SymfuseX.git
+ git clone https://github.com/DT-Gen/TREAT.git
 
  cd SymfuseX
 
@@ -59,7 +59,7 @@ Regardless of the task type, training can be launched with a single command.
 
 ### 1️⃣ Train DTI classification
 
-**Set MAX_EPOCH to 100, BATCH_SIZE to 64 and LR to 5e-5 in SymfuseX.yaml**, then run:
+**Set MAX_EPOCH to 100, BATCH_SIZE to 64 and LR to 5e-5 in TREAT**, then run:
 ```bash
 python main.py --cfg "configs/TREAT.yaml" --task "DTI" --split "${split}" --dataset "${dataset}"
 ```
@@ -67,20 +67,20 @@ ${split} can be random or fold; ${dataset} can be bindingdb, human, or biosnap.
 
 For example, to run the human dataset under a random split:
 ```bash
-python main.py --cfg "configs/SymfuseX.yaml" --task "DTI" --split "random" --dataset "human"
+python main.py --cfg "configs/TREAT.yaml" --task "DTI" --split "random" --dataset "human"
 ```
 
 ### 2️⃣ Train DTA regression
 
-**Set MAX_EPOCH to 1000, BATCH_SIZE to 256 and LR to 5e-4 in SymfuseX.yaml**, then run:
+**Set MAX_EPOCH to 1000, BATCH_SIZE to 256 and LR to 5e-4 in TREAT.yaml**, then run:
 ```bash
-python main.py --cfg "configs/SymfuseX.yaml" --task "DTA" --split "${split}" --dataset "${dataset}"
+python main.py --cfg "configs/TREAT.yaml" --task "DTA" --split "${split}" --dataset "${dataset}"
 ```
 ${split} can be random or cold; ${dataset} can be davis or kiba.
 
 For example, to run the davis dataset under a random split:
 ```bash
-python main.py --cfg "configs/SymfuseX.yaml" --task "DTA" --split "random" --dataset "davis"
+python main.py --cfg "configs/TREAT.yaml" --task "DTA" --split "random" --dataset "davis"
 ```
 
 ### 3️⃣ Molecular generation
